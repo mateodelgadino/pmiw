@@ -1,23 +1,23 @@
 class Juego {
   constructor() {
-    // --- IMÁGENES (ya cargadas globalmente en preload) ---
+    //  IMÁGENES (ya cargadas globalmente en preload) 
     this.imgInicio = fondoInicio;
     this.imgPerdiste = fondoPerdiste;
     this.imgGanaste = fondoGanaste;
 
-    // --- ESTADO DEL JUEGO ---
+    //  ESTADO DEL JUEGO 
     this.estado = "inicio"; // puede ser inicio, jugando, ganado o perdido
 
-    // --- ENTIDADES ---
+    //  ENTIDADES 
     this.personaje = new Personaje(50, height / 2);
     this.autos = [];
     this.obstaculos = [];
 
-    // --- VARIABLES DE JUEGO ---
+    //  VARIABLES DE JUEGO 
     this.vidas = 3;
     this.tiempo = 30 * 60; // 30 segundos (si el juego corre a 60 FPS)
 
-    // --- CONFIGURAR ENTIDADES ---
+    //  CONFIGURAR ENTIDADES 
     for (let i = 0; i < 7; i++) {
       this.autos[i] = new AutoDePolicia();
     }
@@ -179,3 +179,4 @@ class Juego {
     this.sonidoMisterio.stop();
   }
 }
+
